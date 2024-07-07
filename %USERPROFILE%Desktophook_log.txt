@@ -1,0 +1,9 @@
+Hook started
+Current directory: %CD%
+-File 매개 변수에 대한 인수 '.local-build-and-run.ps1'이(가) 없습니다. 기존 '.ps1' 파일의 경로를 -File 매개 변수의 인수로 제공하십시오.
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+새로운 기능 및 개선 사항에 대 한 최신 PowerShell을 설치 하세요! https://aka.ms/PSWindows
+
+Hook finished
