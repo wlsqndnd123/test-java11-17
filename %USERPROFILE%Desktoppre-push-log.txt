@@ -1,3 +1,0 @@
-Pre-push hook executed at %date% %time%
-Pre-push hook executed at %date% %time%
-Pre-push hook executed at %date% %time%
