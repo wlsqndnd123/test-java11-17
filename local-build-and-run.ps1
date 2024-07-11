@@ -1,17 +1,17 @@
 Write-Host "1. Running GitHub Actions workflow..." -ForegroundColor Yellow
 act push -v
 
-Write-Host "2. 도커 이미지 확인 및 빌드..." -ForegroundColor Yellow
+Write-Host "2. Checking and building Docker image..." -ForegroundColor Yellow
 $imageExists = docker images -q my-java-app
 if (-not $imageExists) {
-    Write-Host "도커 이미지가 존재하지 않습니다. 새로 빌드합니다." -ForegroundColor Yellow
+    Write-Host "Docker image does not exist. Building a new one." -ForegroundColor Yellow
     docker build --no-cache -t my-java-app .
 } else {
-    Write-Host "기존 도커 이미지를 사용합니다." -ForegroundColor Green
+    Write-Host "Using existing Docker image." -ForegroundColor Green
 }
 
 if ($LASTEXITCODE -eq 0) {
-    Write-Host "3. 도커 이미지 준비 완료! 컨테이너 실행 준비 중..." -ForegroundColor Green
+    Write-Host "3. Docker image is ready! Preparing to run the container..." -ForegroundColor Green
     
     Write-Host "4. Checking and removing containers using port 8080..." -ForegroundColor Yellow
     $containersUsingPort = docker ps -aq --filter "publish=8080"
@@ -39,5 +39,5 @@ if ($LASTEXITCODE -eq 0) {
         Write-Host "9. There is an issue with the container. Status: $containerStatus" -ForegroundColor Red
     }
 } else {
-    Write-Host "도커 이미지 빌드 실패. 로그를 확인하세요." -ForegroundColor Red
+    Write-Host "Docker image build failed. Please check the logs." -ForegroundColor Red
 }
