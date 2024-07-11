@@ -54,6 +54,9 @@
 Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
 .\local-build-and-run.ps1
 
+##도커 실행전 확인
+   Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
+
 
 ## 워크플로우 설명
 
