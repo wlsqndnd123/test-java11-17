@@ -23,3 +23,13 @@ services:
       - POSTGRES_DB=petclinic
     profiles:
       - postgres
+  oracle:
+    image: oracleinanutshell/oracle-xe-11g
+    ports:
+      - "1521:1521"
+    environment:
+      - ORACLE_ALLOW_REMOTE=true
+      - ORACLE_DISABLE_ASYNCH_IO=true
+      - ORACLE_PASSWORD=petclinic
+    profiles:
+      - oracle
