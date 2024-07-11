@@ -50,6 +50,11 @@
 .\mvnw clean package
 빌드 확인 필수 !!
 
+## 파워쉘 실행 테스트
+Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
+.\local-build-and-run.ps1
+
+
 ## 워크플로우 설명
 
 (여기에 프로젝트의 주요 워크플로우 파일들과 그 역할에 대한 간단한 설명을 추가하세요)
