@@ -8,6 +8,7 @@ if (-not $imageExists) {
     docker build --no-cache -t my-java-app .
 } else {
     Write-Host "Using existing Docker image." -ForegroundColor Green
+    docker build --no-cache -t my-java-app .
 }
 
 if ($LASTEXITCODE -eq 0) {
